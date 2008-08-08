@@ -1,7 +1,7 @@
 %define realname Text-Template
 %define name perl-%{realname}
 %define version 1.45
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Text::Template module for perl
 Name: %{name}
