@@ -1,19 +1,18 @@
-%define realname Text-Template
-%define name perl-%{realname}
-%define version 1.45
-%define release %mkrel 2
+%define upstream_name    Text-Template
+%define upstream_version 1.45
 
-Summary: Text::Template module for perl
-Name: %{name}
-Version: %{version}
-Release: %{release}
-License: GPL or Artistic
-Group: Development/Perl
-Source: %{realname}-%{version}.tar.bz2
-Url: http://search.cpan.org/dist/%{realname}/
-BuildRequires: perl-devel
-BuildRoot: %{_tmppath}/%{name}-buildroot/
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Text::Template module for perl
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source:     http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is a library for generating form letters, building HTML pages, or
@@ -23,7 +22,7 @@ has little Perl programs embedded in it here and there.  When you
 them with their values.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,5 +43,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Artistic COPYING README
 %{perl_vendorlib}/Text
 %{_mandir}/*/*
-
-
