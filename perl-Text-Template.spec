@@ -1,15 +1,15 @@
 %define upstream_name    Text-Template
-%define upstream_version 1.45
+%define upstream_version 1.46
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Text::Template module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source:		http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+Source:		http://www.cpan.org/modules/by-module/Text/Text-Template-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl-JSON-PP
@@ -73,4 +73,5 @@ make test
 * Wed Jan 26 2005 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.44-3mdk
 - Rebuild
 - Remove dependency on perl
+
 

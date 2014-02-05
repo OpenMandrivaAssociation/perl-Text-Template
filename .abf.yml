@@ -1,2 +1,4 @@
+removed_sources:
+  Text-Template-1.45.tar.bz2: dd5cfb4efd072f9f659cbf1f9bf823291b40dceb
 sources:
-  "Text-Template-1.45.tar.bz2": dd5cfb4efd072f9f659cbf1f9bf823291b40dceb
+  Text-Template-1.46.tar.gz: 008df9cfa6f9ab8d0b4f38c3e59d4e8679280bc1
