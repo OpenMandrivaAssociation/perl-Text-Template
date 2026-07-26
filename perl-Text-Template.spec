@@ -1,15 +1,13 @@
 %define upstream_name    Text-Template
-%define upstream_version 1.61
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.61
+Release:	2
 
 Summary:	Text::Template module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/mschout/perl-text-template
-Source:		https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Text-Template-%{upstream_version}.tar.gz
+Source:		https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Text-Template-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ has little Perl programs embedded in it here and there.  When you
 them with their values.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -45,9 +43,7 @@ make test
 %changelog
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 1.450.0-1mdv2010.0
 + Revision: 408089
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.45-2mdv2009.0
+- rebuild using %1.61 Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.45-2mdv2009.0
 + Revision: 268830
 - rebuild early 2009.0 package (before pixel changes)
 
