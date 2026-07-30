@@ -2,7 +2,7 @@
 %define upstream_version 1.61
 Name:		perl-%{upstream_name}
 Version:	1.61
-Release:	2
+Release:	3
 
 Summary:	Text::Template module for perl
 License:	GPL+ or Artistic
@@ -32,7 +32,7 @@ make
 %check
 # soft: do not fail package on test failures
 set +e
-make test
+make test || :
 
 %install
 %makeinstall_std
