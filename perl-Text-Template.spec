@@ -2,7 +2,7 @@
 %define upstream_version 1.61
 Name:		perl-%{upstream_name}
 Version:	1.61
-Release:	8
+Release:	9
 
 Summary:	Text::Template module for perl
 License:	GPL+ or Artistic
